@@ -11,12 +11,43 @@
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
     <!-- Link to CSS -->
     <link rel="stylesheet" type="text/css" href="assets/css/style.css">
-   
 </head>
 
 <body>
-    <!-- Link to JS -->
-    <script src="assets/javascript/app.js"></script>
+    <div class='container-fluid wholeBody'>
+        <div class='row'>
+            <div class='col-md-12 col-sm-12 col-lg-12 text-center'>
+                <h1 class='title'>
+			The Soccer GIF App
+				</h1>
+                <hr class='headerLine'>
+            </div>
+        </div>
+        <div class='row'>
+            <div class='col-md-12 col-sm-12 col-lg-12 text-center'>
+                <div class='buttonHolder'>
+                </div>
+            </div>
+        </div>
+        <div class='row'>
+            <div class='col-md-8 col-lg-8 col-sm-8'>
+                <div class='userInput'>
+                    <form id="movie-form">
+                        <label for="user-input">Search for a word</label>
+                        <input type="text" id="user-input">
+                        <br>
+                        <input id="add-word" type="submit" value="Search Me Dawg">
+                    </form>
+                </div>
+            </div>
+            <div class='col-md-4 col-sm-4 col-lg-4'>
+                <h1 class='instructionText'>
+            		Search a word and you will be returned multiple GIFs 
+            	</h1>
+            </div>
+        </div>
+        <!-- Link to JS -->
+        <script src="assets/javascript/app.js"></script>
 </body>
 
 </html>
