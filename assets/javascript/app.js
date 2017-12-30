@@ -23,16 +23,18 @@ $('#add-word').on('click', function(event) {
 createButton();
 function displayInfo(){
 	var userSearch=$(this).attr('data-name');
-	var queryURL = "https://www.omdbapi.com/?t=" + userSearch + "&y=&plot=short&apikey=40e9cece";
+	var queryURL = 'https://api.giphy.com/v1/gifs/search?api_key=8R7qN3TiJmJOpkLz628uGBYZ8aMsXgkV&q=' + userSearch + '&limit=25&offset=0&rating=G&lang=en';
 
 $.ajax({
           url: queryURL,
           method: "GET"
         }).done(function(response) {
-          console.log(response)});
-console.log('hello')
-}
+          console.log(response)
 
+
+
+$('.resultsDiv').text('Sup Hoe')
+})}
 
 
 $(document).on("click", ".searchWord", displayInfo);
