@@ -13,6 +13,7 @@ function createButton() {
         $('.buttonHolder').append(newButton);
     }
 }
+
 $('#add-word').on('click', function(event) {
     event.preventDefault();
     var input = $('#user-input').val().trim();
@@ -31,18 +32,20 @@ function displayInfo() {
         method: "GET"
     }).done(function(response) {
         console.log(response)
-       // var results = response.data;
-        //console.log(results)
-        for (var i = 0; i < response.length; i++) {
-            //grab gif
-            println(response.response[i].images.original.url);
-            
+        var results = response.data;
+        console.log(results)
+        for (var i = 0; i < results.length; i++) {
+            var gifDiv = $("<div class='item'>");
+            var personImage = $("<img>");
+            personImage.attr("src", results[i].images.fixed_height.url);
+            gifDiv.prepend(personImage);
+            $(".resultsDiv").prepend(gifDiv);
         }
 
 
 
 
-      //  $('.resultsDiv').append(gif);
+        //  $('.resultsDiv').append(gif);
     })
 }
 
