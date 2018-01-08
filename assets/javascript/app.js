@@ -49,23 +49,25 @@ function displayInfo() {
             personImage.addClass('gifClass')
             gifDiv.prepend(personImage);
             $(".resultsDiv").prepend(gifDiv);
+
+//Give GIFs CSS styling 
+            $('.gifClass').css('margin', '5px 5px 5px 5px');
+
         }
 
-
-
-
-
-
-    })
+})
 
 }
 //On click of image, turn still GIF to moving GIF
-$(document).on('click', '.gifClass', function moveGif(){
-    var state = $(this).attr('data-state'); 
-    if (state == 'still'){
+$(document).on('click', '.gifClass', function moveGif() {
+    var state = $(this).attr('data-state');
+    if (state == 'still') {
         $(this).attr('src', $(this).data('animate'));
         $(this).attr('data-state', 'animate');
 
+    } else {
+        $(this).attr('src', $(this).data('still'));
+        $(this).attr('data-state', 'still');
     }
 })
 
