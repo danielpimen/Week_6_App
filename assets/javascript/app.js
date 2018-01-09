@@ -37,6 +37,7 @@ function displayInfo() {
         method: "GET"
     }).done(function(response) {
         console.log(response)
+        $('.resultsDiv').empty();
         var results = response.data;
         console.log(results)
         for (var i = 0; i < results.length; i++) {
@@ -51,7 +52,9 @@ function displayInfo() {
             $(".resultsDiv").prepend(gifDiv);
 
 //Give GIFs CSS styling 
-            $('.gifClass').css('margin', '5px 5px 5px 5px');
+            $('.gifClass').css({'margin-left': 'auto', 'margin-right': 'auto', 'display': 'block'});
+            $('.item').css({'float': 'left', 'background-color':  'black'});
+
 
         }
 
